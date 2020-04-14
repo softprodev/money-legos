@@ -112,7 +112,7 @@ const main = async () => {
   const _data = IDssProxyActions.functions.openLockETHAndDraw.encode([
     legos.maker.contracts.dssCdpManager.address,
     legos.maker.contracts.jug.address,
-    legos.maker.contracts.ethA.join.address,
+    legos.maker.ilks.ethA.join.address,
     legos.maker.contracts.daiJoin.address,
     ethers.utils.formatBytes32String(legos.maker.ilks.ethA.symbol),
     ethers.utils.parseUnits("20", legos.erc20.contracts.dai.decimals),
@@ -149,10 +149,10 @@ Fortunately, the primitives are well written in [DssProxyActions.sol](https://gi
 ```solidity
 pragma solidity ^0.5.0;
 
-import "@studydefi/money-legos/src/maker/interface/IDssProxyActions.sol";
+import "@studydefi/money-legos/src/maker/contracts/DssProxyActionsBase.sol";
 
 
-contract MyCustomVaultManager is DssProxyActionsCommon {
+contract MyCustomVaultManager is DssProxyActionsBase {
     // Referenced from
     // https://github.com/makerdao/dss-proxy-actions/blob/968b5030523af74d786520a9a664b31fa811c05c/src/DssProxyActions.sol#L583
     function myCustomOpenVaultFunction(
