@@ -1,5 +1,31 @@
 # Mainnet Address Overview
 
+## Aave
+
+[Link to ABIs](https://github.com/studydefi/money-legos/tree/master/src/aave/abi)
+
+
+ - LendingPool: [0x398ec7346dcd622edc5ae82352f02be94c62d119](https://etherscan.io/address/0x398ec7346dcd622edc5ae82352f02be94c62d119)
+ - LendingPoolAddressesProvider: [0x24a42fd28c976a61df5d00d0599c34c4f90748c8](https://etherscan.io/address/0x24a42fd28c976a61df5d00d0599c34c4f90748c8)
+ - LendingPoolCore: [0x3dfd23a6c5e8bbcfc9581d2e864a68feb6a076d3](https://etherscan.io/address/0x3dfd23a6c5e8bbcfc9581d2e864a68feb6a076d3)
+ - aBAT: [0xe1ba0fb44ccb0d11b80f92f4f8ed94ca3ff51d00](https://etherscan.io/address/0xe1ba0fb44ccb0d11b80f92f4f8ed94ca3ff51d00)
+ - aBUSD: [0x6ee0f7bb50a54ab5253da0667b0dc2ee526c30a8](https://etherscan.io/address/0x6ee0f7bb50a54ab5253da0667b0dc2ee526c30a8)
+ - aDAI: [0xfc1e690f61efd961294b3e1ce3313fbd8aa4f85d](https://etherscan.io/address/0xfc1e690f61efd961294b3e1ce3313fbd8aa4f85d)
+ - aETH: [0x3a3a65aab0dd2a17e3f1947ba16138cd37d08c04](https://etherscan.io/address/0x3a3a65aab0dd2a17e3f1947ba16138cd37d08c04)
+ - aKNC: [0x9d91be44c06d373a8a226e1f3b146956083803eb](https://etherscan.io/address/0x9d91be44c06d373a8a226e1f3b146956083803eb)
+ - aLEND: [0x7d2d3688df45ce7c552e19c27e007673da9204b8](https://etherscan.io/address/0x7d2d3688df45ce7c552e19c27e007673da9204b8)
+ - aLINK: [0xa64bd6c70cb9051f6a9ba1f163fdc07e0dfb5f84](https://etherscan.io/address/0xa64bd6c70cb9051f6a9ba1f163fdc07e0dfb5f84)
+ - aMANA: [0x6fce4a401b6b80ace52baaefe4421bd188e76f6f](https://etherscan.io/address/0x6fce4a401b6b80ace52baaefe4421bd188e76f6f)
+ - aMKR: [0x7deb5e830be29f91e298ba5ff1356bb7f8146998](https://etherscan.io/address/0x7deb5e830be29f91e298ba5ff1356bb7f8146998)
+ - aREP: [0x71010a9d003445ac60c4e6a7017c1e89a477b438](https://etherscan.io/address/0x71010a9d003445ac60c4e6a7017c1e89a477b438)
+ - aSNX: [0x328c4c80bc7aca0834db37e6600a6c49e12da4de](https://etherscan.io/address/0x328c4c80bc7aca0834db37e6600a6c49e12da4de)
+ - aSUSD: [0x625ae63000f46200499120b906716420bd059240](https://etherscan.io/address/0x625ae63000f46200499120b906716420bd059240)
+ - aTUSD: [0x4da9b813057d04baef4e5800e36083717b4a0341](https://etherscan.io/address/0x4da9b813057d04baef4e5800e36083717b4a0341)
+ - aUSDC: [0x9ba00d6856a4edf4665bca2c2309936572473b7e](https://etherscan.io/address/0x9ba00d6856a4edf4665bca2c2309936572473b7e)
+ - aUSDT: [0x71fc860f7d3a592a4a98740e39db31d25db65ae8](https://etherscan.io/address/0x71fc860f7d3a592a4a98740e39db31d25db65ae8)
+ - aWBTC: [0xfc4b8ed459e00e5400be803a9bb3954234fd50e3](https://etherscan.io/address/0xfc4b8ed459e00e5400be803a9bb3954234fd50e3)
+ - aZRX: [0x6fb0855c404e09c47c3fbca25f08d4e41f9f062f](https://etherscan.io/address/0x6fb0855c404e09c47c3fbca25f08d4e41f9f062f)
+
 ## Compound
 
 [Link to ABIs](https://github.com/studydefi/money-legos/tree/master/src/compound/abi)
@@ -40,6 +66,29 @@
  - curve: [0x45f783cce6b7ff23b2ab2d70e416cdb7d6055f51](https://etherscan.io/address/0x45f783cce6b7ff23b2ab2d70e416cdb7d6055f51)
  - poolToken: [0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8](https://etherscan.io/address/0xdf5e0e81dff6faf3a7e52ba697820c5e32d806a8)
  - zap: [0xbBC81d23Ea2c3ec7e56D39296F0cbB648873a5d3](https://etherscan.io/address/0xbBC81d23Ea2c3ec7e56D39296F0cbB648873a5d3)
+
+## Dydx
+
+[Link to ABIs](https://github.com/studydefi/money-legos/tree/master/src/dydx/abi)
+
+
+ - adminImpl: [0x8a6629fEba4196E0A61B8E8C94D4905e525bc055](https://etherscan.io/address/0x8a6629fEba4196E0A61B8E8C94D4905e525bc055)
+ - canonicalOrders: [0xCd81398895bEa7AD9EFF273aeFFc41A9d83B4dAD](https://etherscan.io/address/0xCd81398895bEa7AD9EFF273aeFFc41A9d83B4dAD)
+ - daiPriceOracle: [0x0fBd14718d8FAB8f9f40Ee5c5612b1F0717100A2](https://etherscan.io/address/0x0fBd14718d8FAB8f9f40Ee5c5612b1F0717100A2)
+ - expiry: [0x0ECE224FBC24D40B446c6a94a142dc41fAe76f2d](https://etherscan.io/address/0x0ECE224FBC24D40B446c6a94a142dc41fAe76f2d)
+ - expiryV2: [0x739A1DF6725657f6a16dC2d5519DC36FD7911A12](https://etherscan.io/address/0x739A1DF6725657f6a16dC2d5519DC36FD7911A12)
+ - limitOrders: [0xDEf136D9884528e1EB302f39457af0E4d3AD24EB](https://etherscan.io/address/0xDEf136D9884528e1EB302f39457af0E4d3AD24EB)
+ - liquidatorProxyV1ForSoloMargin: [0xD4B6cd147ad8A0D5376b6FDBa85fE8128C6f0686](https://etherscan.io/address/0xD4B6cd147ad8A0D5376b6FDBa85fE8128C6f0686)
+ - operationImpl: [0x56E7d4520ABFECf10b38368b00723d9BD3c21ee1](https://etherscan.io/address/0x56E7d4520ABFECf10b38368b00723d9BD3c21ee1)
+ - payableProxyForSoloMargin: [0xa8b39829cE2246f89B31C013b8Cde15506Fb9A76](https://etherscan.io/address/0xa8b39829cE2246f89B31C013b8Cde15506Fb9A76)
+ - polynomialInterestSetter: [0xaEE83ca85Ad63DFA04993adcd76CB2B3589eCa49](https://etherscan.io/address/0xaEE83ca85Ad63DFA04993adcd76CB2B3589eCa49)
+ - refunder: [0x7454dF5d0758D4E7A538c3aCF4841FA9137F0f74](https://etherscan.io/address/0x7454dF5d0758D4E7A538c3aCF4841FA9137F0f74)
+ - saiPriceOracle: [0x787F552BDC17332c98aA360748884513e3cB401a](https://etherscan.io/address/0x787F552BDC17332c98aA360748884513e3cB401a)
+ - signedOperationProxy: [0x2a842bC64343FAD4Ec4a8424ba7ff3c0A70b6e55](https://etherscan.io/address/0x2a842bC64343FAD4Ec4a8424ba7ff3c0A70b6e55)
+ - soloMargin: [0x1e0447b19bb6ecfdae1e4ae1694b0c3659614e4e](https://etherscan.io/address/0x1e0447b19bb6ecfdae1e4ae1694b0c3659614e4e)
+ - stopLimitOrders: [0xbFb635e8c6689ac3874aD9A60FaB1c29270f1710](https://etherscan.io/address/0xbFb635e8c6689ac3874aD9A60FaB1c29270f1710)
+ - usdcPriceOracle: [0x52f1c952A48a4588f9ae615d38cfdbf8dF036e60](https://etherscan.io/address/0x52f1c952A48a4588f9ae615d38cfdbf8dF036e60)
+ - wethPriceOracle: [0xf61AE328463CD997C7b58e7045CdC613e1cFdb69](https://etherscan.io/address/0xf61AE328463CD997C7b58e7045CdC613e1cFdb69)
 
 ## Erc20
 
