@@ -1,34 +1,46 @@
 # Quickstart
 
+`money-legos` help you quickly build your next Defi dapp in no time:
+
+- Typescript-powered auto-complete
+- ABIs and addresses to the following protocols and standards
+  - AAVE
+  - Compound
+  - Curve Finance
+  - DappSys
+  - DyDx
+  - ERC20
+  - MakerDAO
+  - OneSplit
+  - Uniswap v1
+
 ## Install
 
 ```bash
 npm install @studydefi/money-legos
 ```
 
-## Javascript Usage
+or 
 
-First import the module:
+```bash
+yarn add @studydefi/money-legos
+```
+
+## Usage
+
+### JavaScript
 
 ```js
 import { legos } from "@studydefi/money-legos";
-```
 
-Navigate the JSON tree full of ABIs and addresses:
+// access ABIs and addresses
+legos.erc20.abi;
+legos.erc20.dai.address;
 
-```js
-// protocols
+// of many popular DeFi protocols
 legos.uniswap.factory.abi;
 legos.uniswap.factory.address;
 
-// erc20 tokens
-legos.erc20.abi;
-legos.erc20.dai.address;
-```
-
-You can also import specific protocols:
-
-```js
 // import only the protocol you are interested in
 import uniswap from "@studydefi/money-legos/uniswap";
 
@@ -36,7 +48,7 @@ uniswap.factory.abi;
 uniswap.factory.address;
 ```
 
-## Solidity Usage
+### Solidity
 
 ```js
 pragma solidity ^0.5.0;
@@ -75,3 +87,7 @@ contract OneSplitSwapper {
     }
 }
 ```
+
+# Documentation
+
+Documentation and integration examples at https://money-legos.studydefi.com/

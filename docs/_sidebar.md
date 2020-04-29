@@ -1,10 +1,12 @@
 <!-- docs/_sidebar.md -->
 
-- Overview
+- Getting started
   - [Quick start](quickstart.md)
-  - [Addresses](overview_mainnet_address.md)
 
-- Reference Guides
+- Overview
+  - [Mainnet Addresses](overview_mainnet_address.md)
+
+- Integrations
   - [Aave](aave.md)
   - [Compound](compound.md)
   - [CurveFi](curvefi.md)
