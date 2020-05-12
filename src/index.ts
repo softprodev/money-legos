@@ -6,6 +6,7 @@ import { default as erc20 } from "./erc20";
 import { default as compound } from "./compound";
 import { default as maker } from "./maker";
 import { default as onesplit } from "./onesplit";
+import { default as uma } from "./uma";
 import { default as uniswap } from "./uniswap";
 import { default as kyber } from "./kyber";
 
@@ -18,6 +19,7 @@ export const legos = {
   compound,
   maker,
   onesplit,
+  uma,
   uniswap,
   kyber,
 };
