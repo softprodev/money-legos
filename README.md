@@ -26,7 +26,6 @@ Protocols supported:
 - MakerDAO
 - OneSplit
 - Uniswap v1
-- Kyber.Network
 
 Importing specific protocols is also supported:
 
