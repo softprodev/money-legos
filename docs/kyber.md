@@ -7,35 +7,27 @@ Check out the [docs](https://uniswap.org/docs/v1) for more info.
 ### KyberNetworkProxy
 
 ```js
-// ../src/kyber/contracts/KyberNetworkProxy.sol
+// ../src/uniswap/contracts/IUniswapFactory.sol
 
 pragma solidity ^0.5.0;
 
-// Note: Kyber uses it owns ERC20 interface
-// See: https://github.com/KyberNetwork/smart-contracts/blob/master/contracts/ERC20Interface.sol
-import { IERC20 as ERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+interface KyberNetworkProxy {
+function maxGasPrice() public view returns(uint);
+    function getUserCapInWei(address user) public view returns(uint);
+    function getUserCapInTokenWei(address user, ERC20 token) public view returns(uint);
+    function enabled() public view returns(bool);
+    function info(bytes32 id) public view returns(uint);
 
-interface KyberNetworkProxyInterface {
-    function maxGasPrice() external view returns(uint);
-    function getUserCapInWei(address user) external view returns(uint);
-    function getUserCapInTokenWei(address user, ERC20 token) external view returns(uint);
-    function enabled() external view returns(bool);
-    function info(bytes32 id) external view returns(uint);
-
-    function getExpectedRate(ERC20 src, ERC20 dest, uint srcQty) external view
+    function getExpectedRate(ERC20 src, ERC20 dest, uint srcQty) public view
         returns (uint expectedRate, uint slippageRate);
 
     function tradeWithHint(ERC20 src, uint srcAmount, ERC20 dest, address destAddress, uint maxDestAmount,
-        uint minConversionRate, address walletId, bytes calldata hint) external payable returns(uint);
-}
+        uint minConversionRate, address walletId, bytes hint) public payable returns(uint);
 
-interface SimpleNetworkInterface {
-    function swapTokenToToken(ERC20 src, uint srcAmount, ERC20 dest, uint minConversionRate) external returns(uint);
-    function swapEtherToToken(ERC20 token, uint minConversionRate) external payable returns(uint);
-    function swapTokenToEther(ERC20 token, uint srcAmount, uint minConversionRate) external returns(uint);
+    function swapTokenToToken(ERC20 src, uint srcAmount, ERC20 dest, uint minConversionRate) public returns(uint);
+    function swapEtherToToken(ERC20 token, uint minConversionRate) public payable returns(uint);
+    function swapTokenToEther(ERC20 token, uint srcAmount, uint minConversionRate) public returns(uint);
 }
-
-contract KyberNetworkProxy is KyberNetworkProxyInterface, SimpleNetworkInterface {}
 ```
 
 ## Examples
@@ -156,24 +148,25 @@ main();
 ### Solidity
 
 ```js
-// ../tests/kyber.test.sol
-
 pragma solidity ^0.5.0;
 
 import "@studydefi/money-legos/kyber/contracts/KyberNetworkProxy.sol";
+
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract KyberLiteBase {
     // Uniswap Mainnet factory address
     address constant KyberNetworkProxyAddress = 0x818E6FECD516Ecc3849DAf6845e3EC868087B755;
 
-    function _ethToToken(address tokenAddress, uint ethAmount) internal returns (uint) {
+    function _ethToToken(address tokenAddress, uint ethAmount)
+        internal returns (uint) {
         return _ethToToken(tokenAddress, ethAmount, uint(1));
     }
 
-    function _ethToToken(address tokenAddress, uint ethAmount, uint minConversionRate) internal returns (uint) {
-        IERC20 token = IERC20(tokenAddress);
-        return KyberNetworkProxy(KyberNetworkProxyAddress).swapEtherToToken.value(ethAmount)(token, minConversionRate);
+    function _ethToToken(address tokenAddress, uint ethAmount, uint minConversionRate)
+        internal returns (uint) {
+        return KyberNetworkProxy(KyberNetworkProxyAddress)
+            .swapEtherToToken.value(ethAmount)(tokenAddress, minConversionRate);
     }
 
     function _tokenToEth(address tokenAddress, uint tokenAmount) internal returns (uint) {
@@ -181,31 +174,23 @@ contract KyberLiteBase {
     }
 
     function _tokenToEth(address tokenAddress, uint tokenAmount, uint minConversionRate) internal returns (uint) {
-        KyberNetworkProxy kyber = KyberNetworkProxy(KyberNetworkProxyAddress);
+        address kyber = KyberNetworkProxy(KyberNetworkProxyAddress);
 
-        IERC20 token = IERC20(tokenAddress);
+        IERC20(tokenAddress).approve(exchange, tokenAmount);
 
-        token.approve(address(kyber), tokenAmount);
-
-        return kyber.swapTokenToEther(token, tokenAmount, minConversionRate);
+        return kyber.swapTokenToEther(tokenAddress, tokenAmount, minConversionRate);
     }
 
-    function _tokenToToken(address from, address to, uint tokenAmount, uint minConversionRate) internal returns (uint) {
-        KyberNetworkProxy kyber = KyberNetworkProxy(KyberNetworkProxyAddress);
+    function _tokenToToken(address from, address to, uint tokenInAmount, uint minConversionRate) internal returns (uint) {
+        address kyber = KyberNetworkProxy(KyberNetworkProxyAddress);
 
-        IERC20(from).approve(address(kyber), tokenAmount);
+        IERC20(tokenAddress).approve(exchange, tokenAmount);
 
-        return kyber.swapTokenToToken(IERC20(from), tokenAmount, IERC20(to), minConversionRate);
+        return kyber.swapTokenToToken(from, tokenAmount, to, minConversionRate);
     }
 
     function _tokenToToken(address from, address to, uint tokenAmount) internal returns (uint) {
         return _tokenToToken(from, to, tokenAmount, uint(1));
-    }
-
-    function ethToToken(address tokenAddress) public payable {
-        IERC20 token = IERC20(tokenAddress);
-        uint256 tokensAmount = _ethToToken(tokenAddress, msg.value, uint(1));
-        token.transfer(msg.sender, tokensAmount);
     }
 }
 ```
