@@ -40,7 +40,7 @@
  - cWBTC: [0xc11b1268c1a384e55c48c2391d8d480264a3a7f4](https://etherscan.io/address/0xc11b1268c1a384e55c48c2391d8d480264a3a7f4)
  - cZRX: [0xb3319f5d18bc0d84dd1b4825dcde5d5f7266d407](https://etherscan.io/address/0xb3319f5d18bc0d84dd1b4825dcde5d5f7266d407)
  - comptroller: [0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b](https://etherscan.io/address/0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b)
- - priceOracle: [0x1d8aedc9e924730dd3f9641cdb4d1b92b848b4bd](https://etherscan.io/address/0x1d8aedc9e924730dd3f9641cdb4d1b92b848b4bd)
+ - priceOracle: [0xDDc46a3B076aec7ab3Fc37420A8eDd2959764Ec4](https://etherscan.io/address/0xDDc46a3B076aec7ab3Fc37420A8eDd2959764Ec4)
 
 ## Curvefi
 
@@ -133,6 +133,22 @@
 
 
  - onesplit: [0xC586BeF4a0992C495Cf22e1aeEE4E446CECDee0E](https://etherscan.io/address/0xC586BeF4a0992C495Cf22e1aeEE4E446CECDee0E)
+
+## Uma
+
+[Link to ABIs](https://github.com/studydefi/money-legos/tree/master/src/uma/abi)
+
+
+ - designatedVotingFactory: [0xE81EeE5Da165fA6863bBc82dF66E62d18625d592](https://etherscan.io/address/0xE81EeE5Da165fA6863bBc82dF66E62d18625d592)
+ - financialContractsAdmin: [0x4E6CCB1dA3C7844887F9A5aF4e8450d9fd90317A](https://etherscan.io/address/0x4E6CCB1dA3C7844887F9A5aF4e8450d9fd90317A)
+ - finder: [0x40f941E48A552bF496B154Af6bf55725f18D77c3](https://etherscan.io/address/0x40f941E48A552bF496B154Af6bf55725f18D77c3)
+ - governor: [0x592349F7DeDB2b75f9d4F194d4b7C16D82E507Dc](https://etherscan.io/address/0x592349F7DeDB2b75f9d4F194d4b7C16D82E507Dc)
+ - identifierWhitelist: [0xcF649d9Da4D1362C4DAEa67573430Bd6f945e570](https://etherscan.io/address/0xcF649d9Da4D1362C4DAEa67573430Bd6f945e570)
+ - registry: [0x3e532e6222afe9Bcf02DCB87216802c75D5113aE](https://etherscan.io/address/0x3e532e6222afe9Bcf02DCB87216802c75D5113aE)
+ - store: [0x54f44eA3D2e7aA0ac089c4d8F7C93C27844057BF](https://etherscan.io/address/0x54f44eA3D2e7aA0ac089c4d8F7C93C27844057BF)
+ - voting: [0x9921810C710E7c3f7A7C6831e30929f19537a545](https://etherscan.io/address/0x9921810C710E7c3f7A7C6831e30929f19537a545)
+ - votingToken: [0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828](https://etherscan.io/address/0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828)
+ - weth9: [0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 
 ## Uniswap
 
