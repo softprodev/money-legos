@@ -16,9 +16,6 @@ List of all available contracts
 idle.maxYield.dai.address;
 idle.maxYield.usdc.address;
 idle.maxYield.usdt.address;
-idle.maxYield.susd.address;
-idle.maxYield.tusd.address;
-idle.maxYield.wbtc.address;
 
 idle.riskAdjusted.dai.address;
 idle.riskAdjusted.usdc.address;

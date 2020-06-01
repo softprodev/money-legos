@@ -28,8 +28,8 @@ describe("kyber", () => {
     );
 
     const ethToSwap = 5;
-    const ethBeforeWei = await wallet.getBalance();
-    const daiBeforeWei = await daiContract.balanceOf(wallet.address);
+    const ethBefore = await wallet.getBalance();
+    const daiBefore = await daiContract.balanceOf(wallet.address);
 
     const {
       expectedRate,
@@ -40,8 +40,7 @@ describe("kyber", () => {
       parseEther(`${ethToSwap}`),
     );
 
-    const expectedDaiWei = expectedRate.mul(bigNumberify(`${ethToSwap}`));
-    const expectedDai = parseFloat(fromWei(expectedDaiWei));
+    const expectedDai = expectedRate.mul(bigNumberify(`${ethToSwap}`));
 
     // do the actual swapping
     const minConversionRate = slippageRate;
@@ -54,14 +53,16 @@ describe("kyber", () => {
       },
     );
 
-    const ethAfterWei = await wallet.getBalance();
-    const daiAfterWei = await daiContract.balanceOf(wallet.address);
+    const ethAfter = await wallet.getBalance();
+    const daiAfter = await daiContract.balanceOf(wallet.address);
 
-    const daiAfter = parseFloat(fromWei(daiAfterWei));
-    const ethLost = parseFloat(fromWei(ethBeforeWei.sub(ethAfterWei)));
+    const ethLost = parseFloat(fromWei(ethBefore.sub(ethAfter)));
 
-    expect(fromWei(daiBeforeWei)).toBe("0.0");
-    expect(daiAfter).toBeCloseTo(expectedDai);
-    expect(ethLost).toBeCloseTo(ethToSwap);
+    expect(fromWei(daiBefore)).toBe("0.0");
+    expect(parseFloat(fromWei(daiAfter))).toBeCloseTo(
+      parseFloat(fromWei(expectedDai)),
+      1,
+    );
+    expect(ethLost).toBeCloseTo(ethToSwap, 1);
   });
 });
